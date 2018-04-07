@@ -1,0 +1,250 @@
+@keyframes textFadeOut {
+  from {
+    font-size: 10px;
+  }
+  to {
+    font-size: 90px;
+  }
+}
+@-webkit-keyframes textFadeOut {
+  from {
+    font-size: 10px;
+  }
+  to {
+    font-size: 90px;
+  }
+}
+@keyframes win-col {
+  from {
+    height: 0px;
+    top: 190px;
+  }
+  to {
+    height: 380px;
+    top: 3px;
+  }
+}
+@-webkit-keyframes win-col {
+  from {
+    height: 0px;
+    top: 190px;
+  }
+  to {
+    height: 380px;
+    top: 3px;
+  }
+}
+@keyframes win-row {
+  from {
+    width: 0px;
+    left: 185px;
+  }
+  to {
+    width: 370px;
+    left: 10px;
+  }
+}
+@-webkit-keyframes win-row {
+  from {
+    width: 0px;
+    left: 185px;
+  }
+  to {
+    width: 370px;
+    left: 10px;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  width: 400px;
+  height: 400px;
+  background: #888888;
+  margin: 40px auto 0;
+  border: 9px solid greenyellow;
+  position: relative;
+}
+.container .sqaure {
+  width: 114px;
+  height: 114px;
+  background: greenyellow;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  padding: 0;
+  cursor: pointer;
+}
+.container .sqaure p {
+  font-family: sans-serif;
+  color: #3366ff;
+  font-size: 90px;
+  font-weight: bold;
+  margin: 0;
+}
+.container .sqaure p.anim {
+  animation: textFadeOut 1.5s;
+  -webkit-animation: textFadeOut 1.5s;
+  transition: transform 1s;
+  transform: rotate(360deg);
+  -webkit-transition: transform 1s;
+  -webkit-transform: rotate(360deg);
+}
+.container .sqaure:nth-child(1) {
+  margin: 0 10px 10px 0;
+}
+.container .sqaure:nth-child(2) {
+  margin: 0 10px 10px 10px;
+}
+.container .sqaure:nth-child(3) {
+  margin: 0 0 10px 10px;
+}
+.container .sqaure:nth-child(4) {
+  margin: 10px 10px 10px 0;
+}
+.container .sqaure:nth-child(5) {
+  margin: 10px 10px 10px 10px;
+}
+.container .sqaure:nth-child(6) {
+  margin: 10px 0 10px 10px;
+}
+.container .sqaure:nth-child(7) {
+  margin: 10px 10px 0 0;
+}
+.container .sqaure:nth-child(8) {
+  margin: 10px 10px 0 10px;
+}
+.container .sqaure:nth-child(9) {
+  margin: 10px 0 0 10px;
+}
+.container .win-3 {
+  display: block;
+  background: #ff0000;
+  border-radius: 5px;
+  width: 10px;
+  height: 380px;
+  position: absolute;
+  animation: win-col 1s;
+  -webkit-animation: win-col 1s;
+  top: 3px;
+  left: 52px;
+}
+.container .win-4 {
+  display: block;
+  background: #ff0000;
+  border-radius: 5px;
+  width: 10px;
+  height: 380px;
+  position: absolute;
+  animation: win-col 1s;
+  -webkit-animation: win-col 1s;
+  top: 3px;
+  left: 185px;
+}
+.container .win-5 {
+  display: block;
+  background: #ff0000;
+  border-radius: 5px;
+  width: 10px;
+  height: 380px;
+  position: absolute;
+  animation: win-col 1s;
+  -webkit-animation: win-col 1s;
+  top: 3px;
+  left: 320px;
+}
+.container .win-0 {
+  display: block;
+  background: #ff0000;
+  border-radius: 5px;
+  width: 370px;
+  height: 10px;
+  position: absolute;
+  animation: win-row 1s;
+  -webkit-animation: win-row 1s;
+  top: 50px;
+  left: 10px;
+}
+.container .win-1 {
+  display: block;
+  background: #ff0000;
+  border-radius: 5px;
+  width: 370px;
+  height: 10px;
+  position: absolute;
+  animation: win-row 1s;
+  -webkit-animation: win-row 1s;
+  top: 185px;
+  left: 10px;
+}
+.container .win-2 {
+  display: block;
+  background: #ff0000;
+  border-radius: 5px;
+  width: 370px;
+  height: 10px;
+  position: absolute;
+  animation: win-row 1s;
+  -webkit-animation: win-row 1s;
+  top: 320px;
+  left: 10px;
+}
+.container .win-6 {
+  display: block;
+  background: #ff0000;
+  border-radius: 5px;
+  width: 460px;
+  height: 10px;
+  position: absolute;
+  transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  top: 190px;
+  left: -30px;
+}
+.container .win-7 {
+  display: block;
+  background: #ff0000;
+  border-radius: 5px;
+  width: 460px;
+  height: 10px;
+  position: absolute;
+  transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -webkit-transition: 1s ease-in-out;
+  transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  top: 186px;
+  left: -40px;
+}
+.restart {
+  margin: auto;
+  width: 400px;
+  height: 114px;
+  background: #888888;
+  border: 15px solid greenyellow;
+  text-align: center;
+}
+.restart button {
+  padding: 10px 20px 10px;
+  outline: none;
+  background: none;
+  color: #ffff00;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: sans-serif;
+  margin: 20px auto 0;
+  border: none;
+  cursor: pointer;
+}

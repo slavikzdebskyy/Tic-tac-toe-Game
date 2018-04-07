@@ -1,0 +1,215 @@
+@black: #000;
+@blue: #3366ff;
+@white: #fff;
+@grey: #888;
+@greenY: greenyellow;
+@red: #ff0000;
+@yellow: #ffff00;
+@wigthHeightCont: 400px;
+@wigthHeightFeild: 114px;
+@win-0-2: {
+	display: block;
+	background: @red;
+	border-radius: 5px;
+	width: @wigthHeightCont - 30px;
+	height: 10px;
+	position: absolute;
+	animation: win-row 1s;
+	-webkit-animation: win-row 1s;
+};
+@win-3-5: {	display: block;
+	background: @red;
+	border-radius: 5px;
+	width: 10px;
+	height: @wigthHeightCont - 20px;
+	position: absolute;
+	animation: win-col 1s;
+	-webkit-animation: win-col 1s;
+};
+@win-6-7: {
+	display: block;
+	background: @red;
+	border-radius: 5px;
+	width: @wigthHeightCont + 60px;
+	height: 10px;
+	position: absolute;
+	transition: 1s ease-in-out;
+	-moz-transition: 1s ease-in-out;
+	-webkit-transition: 1s ease-in-out;
+};
+@keyframes textFadeOut {
+	from {font-size: 10px;}
+	to {font-size: 90px;}
+};
+@-webkit-keyframes textFadeOut {
+	from {font-size: 10px;}
+	to {font-size: 90px;}
+};
+@keyframes win-col {
+	from {height: 0px;
+				top: (@wigthHeightCont - 20px) / 2;}
+	to {height: @wigthHeightCont - 20px;
+			top: 3px;};
+};
+@-webkit-keyframes win-col {
+	from {height: 0px;
+				top: (@wigthHeightCont - 20px) / 2;}
+	to {height: @wigthHeightCont - 20px;
+			top: 3px;};
+};
+@keyframes win-row {
+	from {width: 0px;
+				left: (@wigthHeightCont - 30px) / 2;}
+	to {width: @wigthHeightCont - 30px;
+			left: 10px;};
+};
+@-webkit-keyframes win-row {
+	from {width: 0px;
+				left: (@wigthHeightCont - 30px) / 2;}
+	to {width: @wigthHeightCont - 30px;
+			left: 10px;};
+};
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	width: @wigthHeightCont;
+	height: @wigthHeightCont;
+	background: @grey;
+	margin: 40px auto 0;
+	border: 9px solid @greenY;
+	position: relative;
+	.sqaure{
+		width: @wigthHeightFeild;
+		height: @wigthHeightFeild;
+		background: @greenY;
+		display: flex;
+		display: -webkit-flex;
+		justify-content: center;
+		-webkit-justify-content: center;
+		align-items: center;
+		-webkit-align-items: center;
+		padding: 0;
+		cursor: pointer;
+		p {
+			font-family: sans-serif;
+			color: @blue;
+			font-size: 90px;
+			font-weight: bold;
+			margin: 0;
+		}
+		p.anim {
+			animation: textFadeOut 1.5s;
+			-webkit-animation: textFadeOut 1.5s;
+			transition: transform 1s;
+			transform: rotate(360deg);
+			-webkit-transition: transform 1s;
+			-webkit-transform: rotate(360deg);
+		}
+		&:nth-child(1){
+			margin: 0 10px 10px 0;
+		}
+		&:nth-child(2){
+			margin: 0 10px 10px 10px;
+		}
+		&:nth-child(3){
+			margin: 0 0 10px 10px;
+		}
+		&:nth-child(4){
+			margin: 10px 10px 10px 0;
+		}
+		&:nth-child(5){
+			margin: 10px 10px 10px 10px;
+		}
+		&:nth-child(6){
+			margin: 10px 0 10px 10px;
+		}
+		&:nth-child(7){
+			margin: 10px 10px 0 0;
+		}
+		&:nth-child(8){
+			margin: 10px 10px 0 10px;
+		}
+		&:nth-child(9){
+			margin: 10px 0 0 10px;
+		}
+	}// .squre
+	// #win {
+	// 	transition: height 3s linear 2s;
+	// 	// -moz-transition: height 3s linear;
+	// 	// -webkit-transition: height 3s linear;
+	// }
+
+	.win-3 {
+		@win-3-5();
+    top: 3px;
+		left: 52px;
+	}	// .win-3 
+	.win-4 {
+		@win-3-5();
+    top: 3px;
+    left: 185px;
+	}	// .win-4
+	.win-5 {
+		@win-3-5();
+    top: 3px;
+    left: 320px;
+	}	// .win-5
+	.win-0 {
+		@win-0-2();
+		top: 50px;
+    left: 10px;
+	}	// .win-0
+	.win-1 {
+		@win-0-2();
+		top: 185px;
+    left: 10px;
+	}	// .win-1
+	.win-2 {
+		@win-0-2();
+		top: 320px;
+    left: 10px;
+	}	// .win-2
+	.win-6 {
+		@win-6-7();
+		transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		-webkit-transform: rotate(45deg);
+		top: 190px;
+    left: -30px;
+	}	// .win-6
+	.win-7 {
+		@win-6-7();
+		transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+		top: 186px;
+    left: -40px;
+	}	// .win-7
+} // .container
+
+.restart {
+	margin: auto;
+	width: @wigthHeightCont;
+	height: @wigthHeightFeild;
+	background: @grey;
+	border: 15px solid @greenY;
+	text-align: center;
+	button {
+		padding: 10px 20px 10px;
+		outline: none;
+		background: none;
+		color: @yellow;
+		font-size: 25px;
+		font-weight: bold;
+		font-family: sans-serif;
+		margin: 20px auto 0;
+		border: none;		
+		cursor: pointer;
+	}// button
+}// .restart
