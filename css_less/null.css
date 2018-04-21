@@ -90,11 +90,11 @@
   margin: 0;
 }
 .container .sqaure p.anim {
-  animation: textFadeOut 1.5s;
-  -webkit-animation: textFadeOut 1.5s;
-  transition: transform 1s;
+  animation: textFadeOut 1s;
+  -webkit-animation: textFadeOut 1s;
+  transition: transform 200ms;
   transform: rotate(360deg);
-  -webkit-transition: transform 1s;
+  -webkit-transition: transform 200ms;
   -webkit-transform: rotate(360deg);
 }
 .container .sqaure:nth-child(1) {
@@ -131,8 +131,8 @@
   width: 10px;
   height: 380px;
   position: absolute;
-  animation: win-col 1s;
-  -webkit-animation: win-col 1s;
+  animation: win-col 300ms;
+  -webkit-animation: win-col 300ms;
   top: 3px;
   left: 52px;
 }
@@ -143,8 +143,8 @@
   width: 10px;
   height: 380px;
   position: absolute;
-  animation: win-col 1s;
-  -webkit-animation: win-col 1s;
+  animation: win-col 300ms;
+  -webkit-animation: win-col 300ms;
   top: 3px;
   left: 185px;
 }
@@ -155,8 +155,8 @@
   width: 10px;
   height: 380px;
   position: absolute;
-  animation: win-col 1s;
-  -webkit-animation: win-col 1s;
+  animation: win-col 300ms;
+  -webkit-animation: win-col 300ms;
   top: 3px;
   left: 320px;
 }
@@ -167,8 +167,8 @@
   width: 370px;
   height: 10px;
   position: absolute;
-  animation: win-row 1s;
-  -webkit-animation: win-row 1s;
+  animation: win-row 300ms;
+  -webkit-animation: win-row 300ms;
   top: 50px;
   left: 10px;
 }
@@ -179,8 +179,8 @@
   width: 370px;
   height: 10px;
   position: absolute;
-  animation: win-row 1s;
-  -webkit-animation: win-row 1s;
+  animation: win-row 300ms;
+  -webkit-animation: win-row 300ms;
   top: 185px;
   left: 10px;
 }
@@ -191,8 +191,8 @@
   width: 370px;
   height: 10px;
   position: absolute;
-  animation: win-row 1s;
-  -webkit-animation: win-row 1s;
+  animation: win-row 300ms;
+  -webkit-animation: win-row 300ms;
   top: 320px;
   left: 10px;
 }
@@ -203,9 +203,9 @@
   width: 460px;
   height: 10px;
   position: absolute;
-  transition: 1s ease-in-out;
-  -moz-transition: 1s ease-in-out;
-  -webkit-transition: 1s ease-in-out;
+  transition: 300ms ease-in-out;
+  -moz-transition: 300ms ease-in-out;
+  -webkit-transition: 300ms ease-in-out;
   transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
@@ -219,9 +219,9 @@
   width: 460px;
   height: 10px;
   position: absolute;
-  transition: 1s ease-in-out;
-  -moz-transition: 1s ease-in-out;
-  -webkit-transition: 1s ease-in-out;
+  transition: 300ms ease-in-out;
+  -moz-transition: 300ms ease-in-out;
+  -webkit-transition: 300ms ease-in-out;
   transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);

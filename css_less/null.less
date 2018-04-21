@@ -7,6 +7,10 @@
 @yellow: #ffff00;
 @wigthHeightCont: 400px;
 @wigthHeightFeild: 114px;
+@pTimeAnimation: 1s;
+@pTimeTransition: 200ms;
+@winTimeAnimation: 300ms;
+
 @win-0-2: {
 	display: block;
 	background: @red;
@@ -14,8 +18,8 @@
 	width: @wigthHeightCont - 30px;
 	height: 10px;
 	position: absolute;
-	animation: win-row 1s;
-	-webkit-animation: win-row 1s;
+	animation: win-row @winTimeAnimation;
+	-webkit-animation: win-row @winTimeAnimation;
 };
 @win-3-5: {	display: block;
 	background: @red;
@@ -23,8 +27,8 @@
 	width: 10px;
 	height: @wigthHeightCont - 20px;
 	position: absolute;
-	animation: win-col 1s;
-	-webkit-animation: win-col 1s;
+	animation: win-col @winTimeAnimation;
+	-webkit-animation: win-col @winTimeAnimation;
 };
 @win-6-7: {
 	display: block;
@@ -33,9 +37,9 @@
 	width: @wigthHeightCont + 60px;
 	height: 10px;
 	position: absolute;
-	transition: 1s ease-in-out;
-	-moz-transition: 1s ease-in-out;
-	-webkit-transition: 1s ease-in-out;
+	transition: @winTimeAnimation ease-in-out;
+	-moz-transition: @winTimeAnimation ease-in-out;
+	-webkit-transition: @winTimeAnimation ease-in-out;
 };
 @keyframes textFadeOut {
 	from {font-size: 10px;}
@@ -104,11 +108,11 @@
 			margin: 0;
 		}
 		p.anim {
-			animation: textFadeOut 1.5s;
-			-webkit-animation: textFadeOut 1.5s;
-			transition: transform 1s;
+			animation: textFadeOut @pTimeAnimation;
+			-webkit-animation: textFadeOut @pTimeAnimation;
+			transition: transform @pTimeTransition;
 			transform: rotate(360deg);
-			-webkit-transition: transform 1s;
+			-webkit-transition: transform @pTimeTransition;
 			-webkit-transform: rotate(360deg);
 		}
 		&:nth-child(1){
